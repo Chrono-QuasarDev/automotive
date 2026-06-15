@@ -1,0 +1,144 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-black: #0E0E0E;
+  --color-brand-orange: #F2A33A;
+  --color-brand-orange-dark: #D4891F;
+  --color-brand-orange-light: #F5BD6E;
+  --color-brand-white: #FFFFFF;
+  --color-brand-charcoal: #1C1C1C;
+  --color-brand-gray: #2A2A2A;
+  --color-brand-gray-light: #3A3A3A;
+  --color-brand-text-muted: #9CA3AF;
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-brand-black);
+  color: var(--color-brand-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-brand-charcoal);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-brand-orange);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand-orange-dark);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(242, 163, 58, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(242, 163, 58, 0.6); }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.8s ease-out forwards;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+/* Hex shape clip path */
+.hex-shape {
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+/* Diagonal section divider */
+.diagonal-top {
+  clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
+}
+
+.diagonal-bottom {
+  clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+}
+
+/* Gradient overlays */
+.gradient-overlay {
+  background: linear-gradient(135deg, rgba(14, 14, 14, 0.95) 0%, rgba(28, 28, 28, 0.8) 50%, rgba(14, 14, 14, 0.9) 100%);
+}
+
+.gradient-orange {
+  background: linear-gradient(135deg, #F2A33A 0%, #D4891F 100%);
+}
+
+/* Industrial line pattern */
+.line-pattern {
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 40px,
+    rgba(242, 163, 58, 0.05) 40px,
+    rgba(242, 163, 58, 0.05) 41px
+  );
+}
