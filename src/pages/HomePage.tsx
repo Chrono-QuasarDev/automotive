@@ -396,8 +396,7 @@ export default function HomePage() {
                   </div>
                   <h4 className="text-brand-white font-semibold mb-2">Call Us</h4>
                   <div className="text-brand-text-muted text-sm space-y-1">
-                    <a href="tel:0242910351" className="block hover:text-brand-orange transition-colors">0242910351</a>
-                    <a href="tel:0560154572" className="block hover:text-brand-orange transition-colors">0560154572</a>
+                    <a href="tel:+2348102908811" className="block hover:text-brand-orange transition-colors">+234 810 290 8811</a>
                   </div>
                 </div>
                 <Link
@@ -440,7 +439,7 @@ export default function HomePage() {
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </Link>
               <a
-                href="https://wa.me/233242910351"
+                href="https://wa.me/2348102908811"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 text-base"

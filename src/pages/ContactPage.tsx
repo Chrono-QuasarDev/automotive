@@ -37,8 +37,8 @@ const contactInfo = [
   {
     icon: <Phone size={24} />,
     title: 'Call Us',
-    details: ['0242910351', '0560154572', '+234 810 290 8811', '+233 242 910 351'],
-    links: ['tel:0242910351', 'tel:0560154572', 'tel:+2348102908811', 'tel:+233242910351'],
+    details: ['+2348102908811'],
+    links: ['tel: +2348102908811'],
   },
   {
     icon: <Mail size={24} />,
@@ -66,7 +66,7 @@ export default function ContactPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const text = `Name: ${formData.name}%0AEmail: ${formData.email}%0APhone: ${formData.phone}%0ASubject: ${formData.subject}%0AMessage: ${formData.message}`;
-    window.open(`https://wa.me/233242910351?text=${text}`, '_blank');
+    window.open(`https://wa.me/+2348102908811?text=${text}`, '_blank');
   };
 
   return (
@@ -250,7 +250,7 @@ export default function ContactPage() {
                     For the fastest response, send us a message on WhatsApp. We typically reply within minutes during business hours.
                   </p>
                   <a
-                    href="https://wa.me/233242910351"
+                    href="https://wa.me/2348102908811"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold px-6 py-3 rounded-lg transition-all duration-300"
@@ -292,7 +292,7 @@ export default function ContactPage() {
                   <h3 className="text-brand-white font-bold mb-3">Prefer to Call?</h3>
                   <p className="text-brand-text-muted text-sm mb-4">Speak directly with our team:</p>
                   <div className="space-y-2">
-                    {['0242910351', '0560154572'].map((num) => (
+                    {['+234 810 290 8811'].map((num) => (
                       <a
                         key={num}
                         href={`tel:${num}`}
